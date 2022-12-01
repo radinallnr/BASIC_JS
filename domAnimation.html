@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    #container {
+            width:500px;
+            height:500px;
+            background:rgb(39, 32, 224);
+            border-radius: 90px;
+            position: relative;
+        }
+    #box {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgb(233, 78, 16);
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="box"> </div>
+
+<script>
+    var box = document.getElementById("box");
+        var pos = 0;
+        var posTop = 0;
+        var posRight = 0;
+        var posBottom = 0;
+        function move(){
+            if(pos < 350){
+                pos += 10
+                box.style.left = pos+'px';
+                box.style.background = 'red';
+            }else if(pos >= 350 && posTop < 350)
+            {
+                posTop += 10
+                box.style.top = posTop+'px';
+            }else if(pos >= 350 && posTop <= 350 && posRight <= 340){
+                posRight += 10
+                box.style.left = (pos - posRight)+'px';
+                box.style.background = 'aqua';
+            }else if(pos >= 350 && posBottom<=340){
+                posBottom += 10
+                box.style.top = (posTop - posBottom)+'px';
+                box.style.background = 'yellow';
+            }else{
+                clearInterval();
+                pos = 0
+                posRight = 0
+                posBottom = 0
+                posTop = 0
+            }
+            setTimeout(function(){
+                box.style.background = 'red'
+            }, 500)
+        }
+       setInterval(move,50)
+</script>
+
+</body>
+</html>

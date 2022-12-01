@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            float: none;
+            margin-top: 100px;
+        }
+        button {
+            margin-top: 30px;
+            float: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+    </div>
+    <!-- name kapital 11 -->
+    Enter your name : <input type="text" id="name" onchange="upperCase()">
+    <!-- show your name 22 -->
+    <button onclick="show();">Click Me</button>
+    <!-- show date 33 -->
+    <button id="myBtn">Click Me</button>
+    <p id="demo"></p>
+    <!-- show number rendom 44 -->
+    <button id="num">Start</button>
+    <!-- show slide pictures -->
+    <div>
+        <button onclick="prev()"> Prev </button>
+        <img id="slider" src="http://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px"/>
+        <button onclick="next()"> Next </button>
+    </div>
+
+    <script>
+    // 11
+        function upperCase() {
+            var x = document.getElementById('name'); 
+            x.value = x.value.toUpperCase();
+}
+    // 22
+        function show() {
+    alert("Hi im indra");
+}
+    // 33  calling the function in window.onload to make sure the HTML is loaded
+    document.getElementById("myBtn").onclick = displayDate;
+
+    function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
+    // 44  calling the function in window.onload to make sure the HTML is loaded
+    window.onload = function() {
+    var btn = document.getElementById("num");
+    btn.addEventListener("click", myFunction);
+
+    function myFunction() {
+        alert(Math.random());
+        btn.removeEventListener("click", myFunction);
+    }
+};
+    // 55
+    var images = [
+        'http://www.sololearn.com/uploads/slider/1.jpg', 
+        'http://www.sololearn.com/uploads/slider/2.jpg', 
+        'http://www.sololearn.com/uploads/slider/3.jpg'
+    ];
+    var num = 0;
+    function next() {
+        var slider = document.getElementById('slider');
+        num++;
+        if(num >= images.length) {
+            num = 0;
+        }
+        slider.src = images[num];
+    }
+    function prev() {
+        var slider = document.getElementById('slider');
+        num--;
+        if(num < 0) {
+            num = images.length-1;
+        }
+        slider.src = images[num];
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coreObject</title>
+</head>
+<body>
+    ><script>
+
+        // 37.1
+/*        
+        var courses = new Array ('menjahit','berenang','memasak')
+        courses[1] ='menyanyi'
+        document.write(courses[1])
+*/
+        // 38.1
+/*  xample 1
+        var courses = new Array()
+        courses[0] = 'menjahit'
+        courses[1] = 'berenang'
+        courses[2] = 'memasak'
+        courses[3] = 'memaksa'
+    xample 2
+     var courses = ['menjahit','berenang','memaksa']
+*/  
+        // 39.1
+/*  
+    var courses = ['menjahit','berenang','memaksa']
+    var menu = ['mie ayam','bakosa','nasi goreng']
+        var concatArray = courses.concat(menu)
+        document.write(concatArray)
+*/
+        // 40.1
+/*    
+    var person = {
+        name : 'john',
+        age : 32,
+    }
+
+    var person2 = []
+    var a = person ['name'] = 'john'
+    var b = person ['age'] = '32'
+    document.write(a)
+    document.write(b)
+    document.write(person['name'])
+    document.write(person['age'])
+*/
+        // 41.1
+
+    // document.write(Math.PI)
+    // document.write(Math.sqrt(81))
+    // document.write(person['age'])
+/*    var random = Math.ceil(Math.random()*10)
+    var random = Math.floor(Math.random()*10)
+    document.write(random)
+*/
+
+/*
+        // soal
+    var year = 2002
+    document.write(calcCent(year));
+    
+function calcCent(y){
+    return Math.ceil(y/100)
+}
+*/
+
+/*
+var n = prompt('masukan bilangan :','')
+var answer = math.sqrt(n);
+alert('nilai dari akar kuadrat bilangan ' + n + 'is' + answer)
+*/
+
+/*              cara 1
+function luas_permukaan(p, l, t){
+    let L = 2 * ( (p*l) + (p*t) + (l*t) )
+    return L;
+}
+
+function volume(p, l, t){
+    let V = p * l * t;
+    return V;
+}
+
+function keliling(p, l, t){
+    let k = 4 * (p + l + t);
+    return k;
+}
+
+let p = 10
+let l = 5
+let t = 2
+
+let luasnya = luas_permukaan(p, l, t)
+let volumenya = volume(p, l, t)
+let kelilingnya = keliling(p, l, t)
+
+alert('balok dengan panjang '+ p +', lebar '+ l +', dan tinggi '+ t)
+alert('mempunyai luas permukaan: '+luasnya)
+alert('mempunyai volume: '+ volumenya)
+alert('mempunyai keliling: '+ kelilingnya)
+*/
+
+/*                 cara 2
+var r = prompt ('masukan nilai jari jari :','')
+var i = prompt ('masukan nilai tinggi :','')
+var answer = (Math.PI*(Math.pow(r,2)*i))
+alert('jari jari ' +r+ 'tinngi ' +i+ ' volume tabung ' + answer)
+*/    
+
+
+        // 42.1
+/*
+function myAlert(){
+    alert('Hello word')
+}
+setInterval(myalert,1000)
+*/
+
+        // 43.1
+/*               
+function myTime(){
+        var d = new Date()
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var seconds = d.getSeconds();
+        document.body.innerHTML ='<h1>'+hours+':'+minutes+':'+seconds+'</h1>';
+}
+setInterval(myTime,100)
+*/
+        // soal
+function mybirt(year, month, day){
+{
+    var namaHari = ['minggu',]
+    var d = new Date(year, month, day)
+    var day = d.getDay();
+    return namaHari[day];
+}
+
+var y = prompt ('masukan tahun lahir kamu')
+var m = prompt ('masukan bulan lahir kamu')
+var d = prompt ('masukan tanggal lahir kamu')
+var dDay = mybirt(y,(m-1),d)
+console.log(dDay)
+alert('hari lahir anda adalah' +day)
+
+
+</script>
+</body>
+</html>

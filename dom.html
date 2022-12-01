@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "demo">
+    </div>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse deleniti accusantium omnis dolores error enim in, nesciunt sed, numquam praesentium, suscipit placeat eligendi quos veniam corrupti vel eveniet iure!</p>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse deleniti accusantium omnis dolores error enim in, nesciunt sed, numquam praesentium, suscipit placeat eligendi quos veniam corrupti vel eveniet iure!</p>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse deleniti accusantium omnis dolores error enim in, nesciunt sed, numquam praesentium, suscipit placeat eligendi quos veniam corrupti vel eveniet iure!</p>
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam esse deleniti accusantium omnis dolores error enim in, nesciunt sed, numquam praesentium, suscipit placeat eligendi quos veniam corrupti vel eveniet iure!</p>
+    
+    <script>
+        // get element by class name 
+        var paragraf = document.getElementsByClassName('paragraf')
+        console.log(paragraf.length)
+        setInterval(function(){
+            paragraf[0].style.backgroundColor = 'violet'
+            paragraf[1].style.backgroundColor = 'blue'
+            paragraf[2].style.backgroundColor = 'coral'
+            paragraf[3].style.backgroundColor = 'broen'
+            setTimeout(function(){
+                for(var x=0; x+paragraf.length; x++){
+                    paragraf[x].style.backgroundColor = 'grey'
+                    paragraf[x].style.color = 'white'
+                }
+            }, 500)
+        }, 1000)
+
+
+        //get element by id
+        var demo = document.getElementById('demo');  
+        setInterval(function(){
+           demo.innerHTML = "Hello";
+           demo.style.backgroundColor = 'red'
+           demo.style.padding = '60'
+           demo.style.color = 'white'
+           setTimeout(function(){
+              demo.innerHTML = "World";
+              demo.style.backgroundColor = 'blue';
+              demo.style.padding = '60px';
+        }, 500)
+        }, 1000)
+    </script>
+</body>
+</html>
